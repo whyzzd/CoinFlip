@@ -13,6 +13,8 @@ public:
     //map的第一个参数是控制关数，后面一个是嵌套的矩阵
     QMap<int,QVector<QVector <int>>>mData;
 
+    //控制关卡是否可玩
+    //bool levelLock[20]={false};
 signals:
 
 };

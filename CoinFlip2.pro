@@ -1,32 +1,40 @@
-QT       += core gui #multimedia
+QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
-TARGET = CoinFlip
+
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    basescene.cpp \
     chooselevelscene.cpp \
     gameconfig.cpp \
+    help.cpp \
+    levelconfig.cpp \
     main.cpp \
-    mainwindow.cpp \
+    mainscene.cpp \
     mycoin.cpp \
     mypushbutton.cpp \
-    playscene.cpp
+    playscene.cpp \
+    scenemanager.cpp
 
 HEADERS += \
+    basescene.h \
     chooselevelscene.h \
     gameconfig.h \
-    mainwindow.h \
+    globalFile.h \
+    help.h \
+    levelconfig.h \
+    mainscene.h \
     mycoin.h \
     mypushbutton.h \
-    playscene.h
+    playscene.h \
+    scenemanager.h
 
-FORMS += \
-    mainwindow.ui
+FORMS +=
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -35,7 +43,3 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     res.qrc
-
-RC_FILE += logo.rc
-
-

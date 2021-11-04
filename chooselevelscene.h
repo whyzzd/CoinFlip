@@ -2,27 +2,47 @@
 #define CHOOSELEVELSCENE_H
 
 #include <QMainWindow>
-#include<playscene.h>
-class ChooseLevelScene : public QMainWindow
+#include<QPainter>
+#include<QLabel>
+#include<QMap>
+#include<QVector>
+#include"basescene.h"
+#include"mypushbutton.h"
+#include"globalFile.h"
+#include "levelconfig.h"
+#include<QThread>
+class ChooseLevelScene : public BaseScene
 {
     Q_OBJECT
 public:
     explicit ChooseLevelScene(QWidget *parent = nullptr);
+    ~ChooseLevelScene();
+    //控制跳转
+    MyPushButton *retbtn;
+    MyPushButton *choosebtn[N];
+
+    LevelConfig levcfg;
+
+    QLabel *labelLock[N]={NULL};
 
 
+    //初始化关卡(加上锁)
+    void resetLock(int n=N);
 
-    // QWidget interface
-     //重写绘图事件
     void paintEvent(QPaintEvent *);
 
-    //维护一个play场景的指针
-    PlayScene *playse = NULL;
+    void closeEvent(QCloseEvent *event);
 signals:
+    void startOpenFile();
+    void closeAndSave();
 
-    //写一个自定义的信号，主场景进行接收
-    void chooseSceneBack();
 
+public slots:
+    void openReceivResult(const QString &str);
 
+private:
+    QThread workThread;
+    int lockPos[N][2];
 
 };
 

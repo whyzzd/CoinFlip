@@ -1,13 +1,10 @@
-#include "mainwindow.h"
-
 #include <QApplication>
-#include"gameconfig.h"
-#include<QDebug>
+#include<scenemanager.h>
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
+
+    SceneManager sm;
 
     return a.exec();
 }

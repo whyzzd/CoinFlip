@@ -1,11 +1,15 @@
 #include "mypushbutton.h"
-#include<QPropertyAnimation>
-//MyPushButton::MyPushButton(QWidget *parent) : QWidget(parent)
-//{
 
-//}
-MyPushButton::MyPushButton(QString normalImg,QString pressImg)//默认参数只能有一处有
+#include<QPropertyAnimation>
+MyPushButton::MyPushButton(QWidget *parent) : QPushButton(parent)
 {
+
+}
+
+MyPushButton::MyPushButton(const QString normalImg,const QString pressImg)//默认参数只能有一处有
+{
+
+    this->setCursor(Qt::PointingHandCursor);
     this->m_NormalImgPath=normalImg;
     this->m_PressImgPath=pressImg;
 
@@ -41,7 +45,7 @@ void MyPushButton::zoom1()
     animation1->setStartValue(QRect(this->x(),this->y(),this->width(),this->height()));
 
     //创建结束位置
-    animation1->setEndValue(QRect(this->x(),this->y()+10,this->width(),this->height()));
+    animation1->setEndValue(QRect(this->x(),this->y()+3,this->width(),this->height()));
 
     //设置缓和曲线，QEasingCurve::OutBounce为弹跳效果
     animation1->setEasingCurve(QEasingCurve::OutBounce);
@@ -58,7 +62,7 @@ void MyPushButton::zoom2()
     animation1->setDuration(200);
 
     //创建起始位置
-    animation1->setStartValue(QRect(this->x(),this->y()+5,this->width(),this->height()));
+    animation1->setStartValue(QRect(this->x(),this->y()+3,this->width(),this->height()));
 
     //创建结束位置
     animation1->setEndValue(QRect(this->x(),this->y(),this->width(),this->height()));

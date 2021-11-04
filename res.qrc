@@ -1,10 +1,15 @@
 <RCC>
     <qresource prefix="/">
-        <file>Image/BoardNode.jpg</file>
-        <file>Image/LevelCompletedDialogBg.jpg</file>
-        <file>Image/Title.png</file>
         <file>Image/BackButton.png</file>
         <file>Image/BackButtonSelected.png</file>
+        <file>Image/BoardNode.jpg</file>
+        <file>Image/Coin0001.ico</file>
+        <file>Image/CoinIco.png</file>
+        <file>Image/LevelIcon.png</file>
+        <file>Image/MenuSceneBg.png</file>
+        <file>Image/OtherSceneBg.png</file>
+        <file>Image/PlayLevelScene.png</file>
+        <file>Image/Title.png</file>
         <file>Image/MenuSceneStartButton.png</file>
         <file>Image/Coin0001.png</file>
         <file>Image/Coin0002.png</file>
@@ -14,10 +19,16 @@
         <file>Image/Coin0006.png</file>
         <file>Image/Coin0007.png</file>
         <file>Image/Coin0008.png</file>
-        <file>Image/CoinIco.png</file>
-        <file>Image/LevelIcon.png</file>
-        <file>Image/MenuSceneBg.png</file>
-        <file>Image/OtherSceneBg.png</file>
-        <file>Image/PlayLevelScene.png</file>
+        <file>Image/LevelCompletedDialogBg1.png</file>
+        <file>Image/LevelCompletedDialogBg2.png</file>
+        <file>Image/NextLevel.png</file>
+        <file>Image/NextLevelSelected.png</file>
+        <file>Image/LastLevel.png</file>
+        <file>Image/LastLevelSelected.png</file>
+        <file>Image/RefreshLevel.png</file>
+        <file>Image/RefreshSelected.png</file>
+        <file>Image/LevelLock.png</file>
+        <file>Image/Raiders.png</file>
+        <file>Image/StartContinueGame.png</file>
     </qresource>
 </RCC>

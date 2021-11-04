@@ -7,8 +7,9 @@ class MyPushButton : public QPushButton
 {
     Q_OBJECT
 public:
-    //explicit MyPushButton(QWidget *parent = nullptr);
-    MyPushButton(QString normalImg,QString pressImg="");
+    explicit MyPushButton(QWidget *parent = nullptr);
+
+    MyPushButton(const QString normalImg,const QString pressImg="");
 
     //设置我自己的图片尺寸
     void setMysize(int wid,int hgt);
@@ -24,12 +25,11 @@ public:
 
 
 
-    QString m_NormalImgPath;
-    QString m_PressImgPath;
 signals:
 
-
-
+private:
+    QString m_NormalImgPath;
+    QString m_PressImgPath;
 
 
 };

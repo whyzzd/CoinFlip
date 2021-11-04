@@ -1,18 +1,18 @@
 #include "mycoin.h"
-#include<QPixmap>
-#include<QDebug>
-//MyCoin::MyCoin(QWidget *parent) : QPushButton(parent)
-//{
 
-//}
+MyCoin::MyCoin(QWidget *parent) : QPushButton(parent)
+{
+
+}
 MyCoin::MyCoin(QString btnImg)
 {
+    this->setCursor(Qt::PointingHandCursor);
     QPixmap pix;
     int res=pix.load(btnImg);
     if(!res)
     {
         QString str=QString("金币%1加载失败").arg(btnImg);
-        qDebug()<<str;
+
         return;
     }
 
@@ -79,7 +79,7 @@ void MyCoin::mousePressEvent(QMouseEvent *event)
     //动画开始的时候或者已经胜利的时候，不能使动画生效
     //以下方式中，前者仅禁用当前按钮，其他位置依旧可以点击，
     //因此可在硬币开始点击后就立刻将点击禁用，然后在硬币翻完之后再将点击放开
-    if(this->isAnimation||this->isWin)
+    if(this->isAnimation||this->cantClick)
     {
         return;
     }
